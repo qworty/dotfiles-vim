@@ -11,6 +11,9 @@ if !has('nvim')
     Plug 'roxma/vim-hug-neovim-rpc'
 endif
 Plug 'roxma/nvim-cm-tern', {'do': 'npm install'}
+"" Fuzzy file finder
+Plug 'junegunn/fzf', { 'do': './install --bin' }
+Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Tab settings
@@ -29,3 +32,7 @@ inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 """ Use tab to select the popup menu
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+"" fzf
+nnoremap ` :FZF<cr>
+nnoremap <C-P> :Ag<cr>
