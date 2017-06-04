@@ -14,6 +14,8 @@ Plug 'roxma/nvim-cm-tern', {'do': 'npm install'}
 "" Fuzzy file finder
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
+"" Tmux navigator
+Plug 'christoomey/vim-tmux-navigator'
 call plug#end()
 
 " Tab settings
@@ -36,3 +38,12 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 "" fzf
 nnoremap ` :FZF<cr>
 nnoremap <C-P> :Ag<cr>
+
+"" tmux-navigator
+""" Window switching, combined with 'stepping'
+""" over into tmux panes
+nnoremap <silent> <C-Left> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-Down> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-Up> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-Right> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-BS> :TmuxNavigatePrevious<cr>
