@@ -6,11 +6,7 @@ autocmd! bufwritepost .vimrc source %
 " Plugins
 call plug#begin('~/.vim/plugged')
 "" Autocompletion
-Plug 'roxma/nvim-completion-manager'
-if !has('nvim')
-    Plug 'roxma/vim-hug-neovim-rpc'
-endif
-Plug 'roxma/nvim-cm-tern', {'do': 'npm install'}
+Plug 'Valloric/YouCompleteMe'
 "" Fuzzy file finder
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
