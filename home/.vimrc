@@ -9,6 +9,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'natebosch/vim-lsc'
 "" Auto-completion selection via <Tab>
 Plug 'ajh17/VimCompletesMe'
+"" ctags / gtags generation
+Plug 'ludovicchabant/vim-gutentags'
 "" Fuzzy file finder
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
@@ -136,12 +138,18 @@ vmap <C-S-Down> ]egv
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-@> <C-x><C-o>
 
+"" Find usages/definitions of symbol under cursor
+nnoremap <leader>css :cstag <C-R>=expand("<cword>")<CR><CR>
+
 " Default to UTF-8 text encoding
 set encoding=utf-8
 set fileencoding=utf-8
 
 "" Remove trailing whitespace on save
 autocmd FileType c,cpp,java,php,python,javascript,html,ruby autocmd BufWritePre <buffer> :call setline(1,map(getline(1 ,"$"),'substitute(v:val,"\\s\\+$","","")'))
+
+" Enable use of ctags tag files for cscope
+set cscopetag
 
 " Completion settings
 autocmd FileType python :set omnifunc=python3complete#Complete
@@ -194,3 +202,6 @@ let g:go_template_autocreate = 0
 "" ALE
 let g:ale_php_phpmd_ruleset = 'cleancode,codesize,design,controversial,naming,unusedcode'
 let g:ale_lint_delay = 1000
+
+"" vim-gutentags
+let g:gutentags_ctags_exclude = [".*/*", "build/*"]

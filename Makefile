@@ -16,8 +16,9 @@ ctags:
 ifeq ($(IS_MACOS), 1)
 	# Universal ctags
 	brew install --HEAD universal-ctags 
-	# GNU Global
-	brew install global
+else
+	# Debian / Ubuntu: installing exuberant-ctags because universal-ctags is not available
+	sudo apt-get install exuberant-ctags
 endif
 
 PIP := $(shell command -v pip3 2>/dev/null)
