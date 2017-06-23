@@ -60,6 +60,9 @@ set sidescroll=1
 " Rebind <Leader> key
 let mapleader = ','
 
+" Remove trailing whitespace on save
+autocmd FileType c,cpp,java,php,python,javascript,html,ruby autocmd BufWritePre <buffer> :call setline(1,map(getline(1 ,"$"),'substitute(v:val,"\\s\\+$","","")'))
+
 " Plugin related settings
 "" nvim-completion-manager
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
