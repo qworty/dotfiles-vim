@@ -46,6 +46,12 @@ set nobackup
 set nowb
 set noswapfile
 
+" Wild file selection menu
+set wildmode=list:longest
+set wildmenu
+set wildignore+=*.o,*.obj,*.pyc,*.pyo,*.jpg,*.jpeg,*.gif,*.png,*/.svn/*,*/.hg/*
+set wildignore+=*/.cache/*,*/cache/*
+
 " Plugin related settings
 "" nvim-completion-manager
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
