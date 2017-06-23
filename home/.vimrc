@@ -12,7 +12,12 @@ Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
 "" Tmux navigator
 Plug 'christoomey/vim-tmux-navigator'
+"" Solarized color scheme
+Plug 'altercation/vim-colors-solarized'
 call plug#end()
+
+" Syntax highlighting
+syntax enable
 
 " Tab settings
 set tabstop=4
@@ -23,6 +28,12 @@ set fo-=t  " don't automatically wrap text when typing
 
 " Make backspace behave as 'usual'
 set backspace=indent,eol,start
+
+" Theme / colors
+set t_Co=256
+let g:solarized_termcolors=256
+set background=light
+colorscheme solarized
 
 " Plugin related settings
 "" nvim-completion-manager
