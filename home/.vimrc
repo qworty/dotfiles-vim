@@ -57,6 +57,9 @@ set scrolloff=7
 set sidescrolloff=7
 set sidescroll=1
 
+" Rebind <Leader> key
+let mapleader = ','
+
 " Plugin related settings
 "" nvim-completion-manager
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
