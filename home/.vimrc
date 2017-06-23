@@ -41,6 +41,11 @@ let g:solarized_termcolors=256
 set background=light
 colorscheme solarized
 
+" Backup settings
+set nobackup
+set nowb
+set noswapfile
+
 " Plugin related settings
 "" nvim-completion-manager
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
