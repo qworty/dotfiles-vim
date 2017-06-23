@@ -26,6 +26,12 @@ set softtabstop=4
 set expandtab
 set fo-=t  " don't automatically wrap text when typing
 
+" Indenting
+filetype indent plugin on
+set cindent
+set smartindent
+set autoindent
+
 " Make backspace behave as 'usual'
 set backspace=indent,eol,start
 
