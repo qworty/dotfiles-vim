@@ -14,6 +14,8 @@ Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator'
 "" Solarized color scheme
 Plug 'altercation/vim-colors-solarized'
+"" Auto-close brackets/quotes/etc.
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 " Syntax highlighting
@@ -110,3 +112,6 @@ nnoremap <silent> <C-Down> :TmuxNavigateDown<cr>
 nnoremap <silent> <C-Up> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-Right> :TmuxNavigateRight<cr>
 nnoremap <silent> <C-BS> :TmuxNavigatePrevious<cr>
+
+"" auto-pairs"
+let g:AutoPairsShortcutFastWrap = '<C-e>'
