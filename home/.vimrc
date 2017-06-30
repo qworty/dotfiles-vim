@@ -31,6 +31,7 @@ filetype indent plugin on
 set cindent
 set smartindent
 set autoindent
+set shiftround
 
 " Make backspace behave as 'usual'
 set backspace=indent,eol,start
@@ -46,6 +47,12 @@ set nobackup
 set nowb
 set noswapfile
 
+" Search settings
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
 " Wild file selection menu
 set wildmode=list:longest
 set wildmenu
@@ -59,6 +66,12 @@ set sidescroll=1
 
 " Rebind <Leader> key
 let mapleader = ','
+
+nmap <Leader>w :w!<CR>
+
+" Default to UTF-8 text encoding
+set encoding=utf-8
+set fileencoding=utf-8
 
 " Remove trailing whitespace on save
 autocmd FileType c,cpp,java,php,python,javascript,html,ruby autocmd BufWritePre <buffer> :call setline(1,map(getline(1 ,"$"),'substitute(v:val,"\\s\\+$","","")'))
