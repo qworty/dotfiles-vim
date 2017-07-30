@@ -16,6 +16,8 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'altercation/vim-colors-solarized'
 "" Auto-close brackets/quotes/etc.
 Plug 'jiangmiao/auto-pairs'
+"" Better Python indentation
+Plug 'Vimjas/vim-python-pep8-indent'
 call plug#end()
 
 " Syntax highlighting
