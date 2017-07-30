@@ -66,7 +66,9 @@ set wildmenu
 set wildignore+=*.o,*.obj,*.pyc,*.pyo,*.jpg,*.jpeg,*.gif,*.png,*/.svn/*,*/.hg/*
 set wildignore+=*/.cache/*,*/cache/*
 
-" Keep X lines above/below the cursor when scrolling
+" Scroll settings
+set ruler
+"" Keep X lines above/below the cursor when scrolling
 set scrolloff=7
 set sidescrolloff=7
 set sidescroll=1
