@@ -51,6 +51,9 @@ set nobackup
 set nowb
 set noswapfile
 
+" Buffer settings
+set hidden  " Allow switching to other buffers from an unsaved one
+
 " Search settings
 set incsearch
 set hlsearch
