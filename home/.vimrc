@@ -20,6 +20,8 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-surround'
 "" Better Python indentation
 Plug 'Vimjas/vim-python-pep8-indent'
+"" PHP syntax highlighting
+Plug 'StanAngeloff/php.vim'
 call plug#end()
 
 " Syntax highlighting
@@ -122,5 +124,5 @@ nnoremap <silent> <C-Up> :TmuxNavigateUp<cr>
 nnoremap <silent> <C-Right> :TmuxNavigateRight<cr>
 nnoremap <silent> <C-BS> :TmuxNavigatePrevious<cr>
 
-"" auto-pairs"
+"" auto-pairs
 let g:AutoPairsShortcutFastWrap = '<C-e>'
