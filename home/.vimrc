@@ -15,7 +15,7 @@ Plug 'christoomey/vim-tmux-navigator'
 "" Solarized color scheme
 Plug 'altercation/vim-colors-solarized'
 "" Auto-close brackets/quotes/etc.
-Plug 'jiangmiao/auto-pairs'
+Plug 'optroot/auto-pairs'
 "" vim-surround
 Plug 'tpope/vim-surround'
 "" Better Python indentation
@@ -86,7 +86,11 @@ nmap <Leader>w :w!<CR>
 set encoding=utf-8
 set fileencoding=utf-8
 
-" Remove trailing whitespace on save
+" Settings per file type
+
+autocmd Filetype php setlocal noexpandtab
+
+"" Remove trailing whitespace on save
 autocmd FileType c,cpp,java,php,python,javascript,html,ruby autocmd BufWritePre <buffer> :call setline(1,map(getline(1 ,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
 " Plugin related settings
@@ -126,3 +130,8 @@ nnoremap <silent> <C-BS> :TmuxNavigatePrevious<cr>
 
 "" auto-pairs
 let g:AutoPairsShortcutFastWrap = '<C-e>'
+""" Extra settings added in 'optroot' fork
+let g:AutoPairsMultilineClose = 0
+let g:AutoPairsBalanceImmediately = 1
+let g:AutoPairsNeverJumpLines = 1
+let g:AutoPairsOnlyBeforeClose = 1
