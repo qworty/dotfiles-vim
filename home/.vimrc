@@ -18,6 +18,8 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'optroot/auto-pairs'
 "" vim-surround
 Plug 'tpope/vim-surround'
+"" newrw improvements
+Plug 'tpope/vim-vinegar'
 "" Better Python indentation
 Plug 'Vimjas/vim-python-pep8-indent'
 "" PHP syntax highlighting
@@ -76,6 +78,11 @@ set ruler
 set scrolloff=7
 set sidescrolloff=7
 set sidescroll=1
+
+" netrw settings
+let g:netrw_banner = 0
+let g:netrw_winsize = 20
+let g:netrw_altv = 1
 
 " Rebind <Leader> key
 let mapleader = ','
