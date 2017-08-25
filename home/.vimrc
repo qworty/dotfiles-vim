@@ -69,6 +69,7 @@ set smartcase
 " Wild file selection menu
 set wildmode=list:longest
 set wildmenu
+set wildignorecase
 set wildignore+=*.o,*.obj,*.pyc,*.pyo,*.jpg,*.jpeg,*.gif,*.png,*/.svn/*,*/.hg/*
 set wildignore+=*/.cache/*,*/cache/*
 
