@@ -95,10 +95,6 @@ nmap <Leader>w :w!<CR>
 set encoding=utf-8
 set fileencoding=utf-8
 
-" Settings per file type
-
-autocmd Filetype php setlocal noexpandtab
-
 "" Remove trailing whitespace on save
 autocmd FileType c,cpp,java,php,python,javascript,html,ruby autocmd BufWritePre <buffer> :call setline(1,map(getline(1 ,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
