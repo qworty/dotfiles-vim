@@ -89,7 +89,17 @@ let g:netrw_sort_options = "i"
 " Rebind <Leader> key
 let mapleader = ','
 
+" Shortcut to (force) save buffer
 nmap <Leader>w :w!<CR>
+
+" Clear search highlights
+noremap <silent><Leader>/ :nohls<CR>
+
+" Sort selection
+vmap s :sort<CR>
+
+" Switch to previous buffer with backspace
+nmap <BS> <C-^>
 
 " Default to UTF-8 text encoding
 set encoding=utf-8
