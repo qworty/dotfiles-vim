@@ -20,6 +20,8 @@ Plug 'optroot/auto-pairs'
 Plug 'tpope/vim-surround'
 "" newrw improvements
 Plug 'tpope/vim-vinegar'
+"" Line/block comments
+Plug 'scrooloose/nerdcommenter'
 "" Better Python indentation
 Plug 'Vimjas/vim-python-pep8-indent'
 "" PHP syntax highlighting
