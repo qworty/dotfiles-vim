@@ -133,11 +133,8 @@ set fileencoding=utf-8
 autocmd FileType c,cpp,java,php,python,javascript,html,ruby autocmd BufWritePre <buffer> :call setline(1,map(getline(1 ,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
 " Plugin related settings
-"" nvim-completion-manager
-inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
-""" Use tab to select the popup menu
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+"" YouCompleteMe
+nnoremap <Leader>d :YcmCompleter GoToDefinition<CR>
 
 "" fzf
 nnoremap ` :FZF<CR>
