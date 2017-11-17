@@ -20,6 +20,8 @@ Plug 'optroot/auto-pairs'
 Plug 'tpope/vim-surround'
 "" newrw improvements
 Plug 'tpope/vim-vinegar'
+"" Various mappings, such as line bubbling, URL encoding, etc.
+Plug 'tpope/vim-unimpaired'
 "" Line/block comments
 Plug 'scrooloose/nerdcommenter'
 "" Better Python indentation
@@ -29,6 +31,15 @@ Plug 'fatih/vim-go'
 "" PHP syntax highlighting
 Plug 'StanAngeloff/php.vim'
 call plug#end()
+
+" Setup for tmux environments
+if &term =~ '^screen'
+    " tmux will send xterm-style keys when its xterm-keys option is on
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif
 
 " Syntax highlighting
 syntax enable
@@ -104,6 +115,13 @@ vmap s :sort<CR>
 
 " Switch to previous buffer with backspace
 nmap <BS> <C-^>
+
+" Bubble single line
+nmap <C-S-Up> [e
+nmap <C-S-Down> ]e
+" Bubble multiple lines
+vmap <C-S-Up> [egv
+vmap <C-S-Down> ]egv
 
 " Default to UTF-8 text encoding
 set encoding=utf-8
