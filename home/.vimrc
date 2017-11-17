@@ -90,6 +90,10 @@ set wildignorecase
 set wildignore+=*.o,*.obj,*.pyc,*.pyo,*.jpg,*.jpeg,*.gif,*.png,*/.svn/*,*/.hg/*
 set wildignore+=*/.cache/*,*/cache/*
 
+" Line numbering
+set number
+set relativenumber
+
 " Scroll settings
 set ruler
 "" Keep X lines above/below the cursor when scrolling
