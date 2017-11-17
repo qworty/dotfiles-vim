@@ -24,6 +24,8 @@ Plug 'tpope/vim-vinegar'
 Plug 'scrooloose/nerdcommenter'
 "" Better Python indentation
 Plug 'Vimjas/vim-python-pep8-indent'
+"" Go development plugin
+Plug 'fatih/vim-go'
 "" PHP syntax highlighting
 Plug 'StanAngeloff/php.vim'
 call plug#end()
@@ -152,3 +154,6 @@ let g:AutoPairsMultilineClose = 0
 let g:AutoPairsBalanceImmediately = 1
 let g:AutoPairsNeverJumpLines = 1
 let g:AutoPairsOnlyBeforeClose = 1
+
+"" vim-go
+let g:go_template_autocreate = 0
