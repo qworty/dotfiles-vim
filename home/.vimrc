@@ -5,8 +5,10 @@ autocmd! bufwritepost .vimrc source %
 
 " Plugins
 call plug#begin('~/.vim/plugged')
-"" Autocompletion
-Plug 'Valloric/YouCompleteMe'
+"" Autocompletion via Language Server Protocol
+Plug 'natebosch/vim-lsc'
+"" Auto-completion selection via <Tab>
+Plug 'ajh17/VimCompletesMe'
 "" Fuzzy file finder
 Plug 'junegunn/fzf', { 'do': './install --bin' }
 Plug 'junegunn/fzf.vim'
@@ -107,27 +109,32 @@ let g:netrw_winsize = 20
 let g:netrw_altv = 1
 let g:netrw_sort_options = "i"
 
-" Rebind <Leader> key
+" Key bindings
+"" Rebind <Leader> key
 let mapleader = ','
 
-" Shortcut to (force) save buffer
+"" Shortcut to (force) save buffer
 nmap <Leader>w :w!<CR>
 
-" Clear search highlights
+"" Clear search highlights
 noremap <silent><Leader>/ :nohls<CR>
 
-" Sort selection
+"" Sort selection
 vmap s :sort<CR>
 
-" Switch to previous buffer with backspace
+"" Switch to previous buffer with backspace
 nmap <BS> <C-^>
 
-" Bubble single line
+"" Bubble single line
 nmap <C-S-Up> [e
 nmap <C-S-Down> ]e
-" Bubble multiple lines
+"" Bubble multiple lines
 vmap <C-S-Up> [egv
 vmap <C-S-Down> ]egv
+
+"" Trigger omnifunc
+inoremap <C-Space> <C-x><C-o>
+inoremap <C-@> <C-x><C-o>
 
 " Default to UTF-8 text encoding
 set encoding=utf-8
@@ -136,9 +143,16 @@ set fileencoding=utf-8
 "" Remove trailing whitespace on save
 autocmd FileType c,cpp,java,php,python,javascript,html,ruby autocmd BufWritePre <buffer> :call setline(1,map(getline(1 ,"$"),'substitute(v:val,"\\s\\+$","","")'))
 
+" Completion settings
+autocmd FileType python :set omnifunc=python3complete#Complete
+
 " Plugin related settings
-"" YouCompleteMe
-nnoremap <Leader>d :YcmCompleter GoToDefinition<CR>
+"" vim-lsc
+let g:lsc_server_commands = {
+     \ 'python': 'pyls',
+     \ 'javascript': 'javascript-typescript-stdio',
+\}
+let g:lsc_auto_map = v:true
 
 "" fzf
 nnoremap ` :FZF<CR>
