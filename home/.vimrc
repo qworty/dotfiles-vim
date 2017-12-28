@@ -19,7 +19,7 @@ Plug 'optroot/auto-pairs'
 "" vim-surround
 Plug 'tpope/vim-surround'
 "" newrw improvements
-Plug 'tpope/vim-vinegar'
+Plug 'gabebw/vim-vinegar', { 'branch': 'gbw-fix-for-vim-vinegar-issue-87' }
 "" Various mappings, such as line bubbling, URL encoding, etc.
 Plug 'tpope/vim-unimpaired'
 "" Line/block comments
