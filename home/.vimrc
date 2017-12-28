@@ -30,6 +30,8 @@ Plug 'w0rp/ale'
 Plug 'Vimjas/vim-python-pep8-indent'
 "" Go development plugin
 Plug 'fatih/vim-go'
+""" Visual debugger
+Plug 'markkimsal/vdebug', { 'branch': 'python3' }
 "" PHP syntax highlighting
 Plug 'StanAngeloff/php.vim'
 call plug#end()
