@@ -26,8 +26,6 @@ Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-unimpaired'
 "" Line/block comments
 Plug 'scrooloose/nerdcommenter'
-"" Asynchronous linting
-Plug 'w0rp/ale'
 "" Better Python indentation
 Plug 'Vimjas/vim-python-pep8-indent'
 "" Go development plugin
@@ -192,7 +190,3 @@ let g:AutoPairsOnlyBeforeClose = 1
 
 "" vim-go
 let g:go_template_autocreate = 0
-
-"" ALE
-let g:ale_php_phpmd_ruleset = 'cleancode,codesize,design,controversial,naming,unusedcode'
-let g:ale_lint_delay = 1000
