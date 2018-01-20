@@ -34,6 +34,8 @@ Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'fatih/vim-go'
 "" PHP syntax highlighting
 Plug 'StanAngeloff/php.vim'
+"" TypeScript syntax highlighting
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 " Setup for tmux environments
