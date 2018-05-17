@@ -28,6 +28,8 @@ Plug 'tpope/vim-eunuch'
 Plug 'scrooloose/nerdcommenter'
 "" Asynchronous linting
 Plug 'w0rp/ale'
+"" Vimwiki
+Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 "" Better Python indentation
 Plug 'Vimjas/vim-python-pep8-indent'
 "" Go development plugin
@@ -188,3 +190,7 @@ let g:go_template_autocreate = 0
 "" ALE
 let g:ale_php_phpmd_ruleset = 'cleancode,codesize,design,controversial,naming,unusedcode'
 let g:ale_lint_delay = 1000
+
+"" vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki/',
+                     \ 'syntax': 'markdown', 'ext': '.md'}]
