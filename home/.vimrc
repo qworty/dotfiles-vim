@@ -32,10 +32,12 @@ Plug 'w0rp/ale'
 Plug 'Vimjas/vim-python-pep8-indent'
 "" Go development plugin
 Plug 'fatih/vim-go'
-""" Visual debugger
+""" Visual debugger for multiple langauges
 Plug 'markkimsal/vdebug', { 'branch': 'python3' }
 "" PHP syntax highlighting
 Plug 'StanAngeloff/php.vim'
+"" TypeScript syntax highlighting
+Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 " Setup for tmux environments
