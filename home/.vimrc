@@ -22,6 +22,8 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-vinegar'
 "" Various mappings, such as line bubbling, URL encoding, etc.
 Plug 'tpope/vim-unimpaired'
+"" UNIX shell commands in Vim (move, mkdir, chmod etc)
+Plug 'tpope/vim-eunuch'
 "" Line/block comments
 Plug 'scrooloose/nerdcommenter'
 "" Asynchronous linting
