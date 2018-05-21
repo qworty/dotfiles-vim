@@ -44,7 +44,14 @@ call plug#end()
 
 " Setup for tmux environments
 if &term =~ '^screen'
-    " tmux will send xterm-style keys when its xterm-keys option is on
+    " Make Vim recognize xterm escape sequences for Page and Arrow
+    " keys combined with modifiers such as Shift, Control, and Alt.
+    " See http://www.reddit.com/r/vim/comments/1a29vk/_/c8tze8p
+    " Page keys http://sourceforge.net/p/tmux/tmux-code/ci/master/tree/FAQ
+    execute "set t_kP=\e[5;*~"
+    execute "set t_kN=\e[6;*~"
+
+    " Arrow keys http://unix.stackexchange.com/a/34723
     execute "set <xUp>=\e[1;*A"
     execute "set <xDown>=\e[1;*B"
     execute "set <xRight>=\e[1;*C"
