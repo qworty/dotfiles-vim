@@ -196,7 +196,7 @@ let g:AutoPairsOnlyBeforeClose = 1
 let g:go_template_autocreate = 0
 
 "" ALE
-let g:ale_php_phpmd_ruleset = 'cleancode,codesize,design,controversial,naming,unusedcode'
+let g:ale_php_phpmd_ruleset = ''
 let g:ale_lint_delay = 1000
 
 "" vimwiki
