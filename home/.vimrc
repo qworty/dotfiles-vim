@@ -43,6 +43,7 @@ Plug 'leafgarland/typescript-vim'
 call plug#end()
 
 " Setup for tmux environments
+set t_ut=
 if &term =~ '^screen'
     " Make Vim recognize xterm escape sequences for Page and Arrow
     " keys combined with modifiers such as Shift, Control, and Alt.
