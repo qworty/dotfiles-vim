@@ -200,5 +200,14 @@ let g:ale_php_phpmd_ruleset = ''
 let g:ale_lint_delay = 1000
 
 "" vimwiki
+nmap <Leader>vw <Plug>VimwikiIndex
+nmap <Leader>vt <Plug>VimwikiTabIndex
+nmap <Leader>vs <Plug>VimwikiUISelect
+nmap <Leader>vi <Plug>VimwikiDiaryIndex
+nmap <Leader>v<Leader>w <Plug>VimwikiMakeDiaryNote
+nmap <Leader>v<Leader>t <Plug>VimwikiTabMakeDiaryNote
+nmap <Leader>v<Leader>y <Plug>VimwikiMakeYesterdayDiaryNote
+nmap <Leader>v<Leader>m <Plug>VimwikiMakeTomorrowDiaryNote
+nmap <Leader>v<Leader>i <Plug>VimwikiDiaryGenerateLinks
 let g:vimwiki_list = [{'path': '~/vimwiki/',
                      \ 'syntax': 'markdown', 'ext': '.md'}]
