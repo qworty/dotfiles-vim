@@ -24,6 +24,8 @@ Plug 'tpope/vim-vinegar'
 Plug 'tpope/vim-unimpaired'
 "" UNIX shell commands in Vim (move, mkdir, chmod etc)
 Plug 'tpope/vim-eunuch'
+"" Git wrapper
+Plug 'tpope/vim-fugitive'
 "" Line/block comments
 Plug 'scrooloose/nerdcommenter'
 "" Asynchronous linting
